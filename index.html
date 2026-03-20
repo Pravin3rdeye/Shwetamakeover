@@ -7,22 +7,44 @@
 <body>
 
 <nav>
-<h1>Shweta Makeover Studio</h1>
-<div>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="appointment.html">Book</a>
-<a href="contact.html">Contact</a>
-</div>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Beauty Studio Logo" class="logo">
+        <span><h1>Shweta Makeover Studio</h1></span>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="appointment.html">Book</a>
+        <a href="contact.html">Contact</a>
+	<a href="about.html">About</a>
+    </div>
 </nav>
-
 <section class="hero">
 <div>
 <h2>Luxury Beauty At Your Home</h2>
 <p>Professional Makeup & Beauty Services in Varanasi</p>
-<a href="appointment.html"><button class="btn">Book Now</button></a>
+<!--<a href="appointment.html"><button class="btn">Book Now</button></a>-->
+<a href="https://wa.me/919452303929?text=Hi%20I%20want%20to%20book%20an%20appointment" target="_blank">
+    <button class="btn">Book on WhatsApp</button>
+</a>
+<a href="https://calendly.com/yourlink" target="_blank">
+<button class="btn">Schedule Appointment</button>
+<a href="https://wa.me/918511674484?text=Hi%20I%20want%20to%20book%20an%20appointment.%0AName:%0ADate:%0AService:"
+target="_blank">
+<button class="btn">Book Appointment</button>
+</a>
+
+</a>
+</div>
+</section>
+
+<section Class="content">
+<div>
+<h2>Makeup Artists in Varanasi</h2>
+<h2>----------------------------------</h2>
+
+
 </div>
 </section>
 
@@ -36,6 +58,37 @@
 </section>
 
 <footer>© 2026 Beauty Studio</footer>
+
+<a href="https://wa.me/919452303929?text=Hi%20I%20want%20to%20book%20a%20beauty%20service"
+   class="whatsapp-float" target="_blank">
+   💬
+</a>
+
+
+<style>
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    z-index:1000;
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+</style>
 
 </body>
 </html>
