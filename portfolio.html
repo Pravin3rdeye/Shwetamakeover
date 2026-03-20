@@ -1,25 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+
+<title>Portfolio</title>
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"> -->
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#000,#1a1a1a);
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.9);
+    position:sticky;
+    top:0;
+}
+
+nav h1{
+    color:#d4af37;
+}
+
+.nav-links a{
+    color:#fff;
+    margin-left:25px;
+    text-decoration:none;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#d4af37;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h2{
+    color:#d4af37;
+    font-size:40px;
+}
+
+/* GALLERY */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.gallery img{
+    width:300px;
+    height:350px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(212,175,55,0.5);
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+
 </head>
+
 <body>
 
-<nav>...</nav>
+<!-- NAVBAR -->
+<nav>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Beauty Studio Logo" class="logo">
+        <span><h1>Shweta Makeover Studio</h1></span>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="appointment.html">Book</a>
+        <a href="contact.html">Contact</a>
+	<a href="about.html">About</a>
+    </div>
+</nav>
 
-<section>
-<h2>Our Work</h2>
 
+<!-- HEADER -->
+<header>
+    <h2>Our Beautiful Work</h2>
+    <p>Explore our latest makeup & beauty transformations</p>
+</header>
+
+<!-- GALLERY -->
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb">
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
-<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
-<img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec">
+
+    <img src="images/work1.jpg" onclick="window.open(this.src)">
+    <img src="images/work2.jpg" onclick="window.open(this.src)">
+    <img src="images/work3.jpg" onclick="window.open(this.src)">
+    <img src="images/work4.jpg" onclick="window.open(this.src)">
+
+</div>
+<div class="gallery">
+
+    <img src="images/work1.jpg">
+    <img src="images/work2.jpg">
+    <img src="images/work3.jpg">
+    <img src="images/work4.jpg">
+
+    <!-- ADD NEW IMAGE HERE -->
+    <img src="images/newimage.jpg">
+    <img src="images/bridal1.jpg">
+    <img src="images/makeup2.jpg">
+
 </div>
 
-</section>
+<!-- FOOTER -->
+<footer>
+    © 2026 Beauty Studio | All Rights Reserved
+</footer>
+<a href="https://wa.me/919452303929?text=Hi%20I%20want%20to%20book%20a%20beauty%20service"
+   class="whatsapp-float" target="_blank">
+   💬
+</a>
 
-<footer>© 2026</footer>
+<style>
+.whatsapp-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    z-index:1000;
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+</style>
+
 </body>
 </html>
