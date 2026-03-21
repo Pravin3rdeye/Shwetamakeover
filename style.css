@@ -14,10 +14,13 @@ body{
 nav{
     display:flex;
     justify-content:space-between;
-    padding:20px 60px;
-    background:#000;
+    align-items:center;
+    padding:10px 20px;
+    background:#111;
+    color:white;
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 nav h1{
@@ -78,8 +81,8 @@ h2{
 }
 
 .logo{
-    height:40px;  /* adjust to fit your navbar */
-    width:auto;
+      /* adjust to fit your navbar */
+    width:50px;
 }
 
 .logo:hover{
@@ -125,8 +128,9 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 60px;
-    background:rgba(0,0,0,0.9);
+    padding:10px 20px;
+    background:#111;
+    color:white;
     position:sticky;
     top:0;
     z-index:1000;
@@ -137,6 +141,10 @@ nav{
     position:relative;
     margin-left:25px;
     font-weight:500;
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:15px;
 }
 
 @media (max-width:768px){
@@ -208,4 +216,38 @@ body{
 
 .hero h2{
     text-shadow:0 0 20px rgba(212,175,55,0.7);
+}
+/* Common button style */
+.nav-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+/* Left button */
+.prev{
+    left: 10px;
+}
+
+/* Right button */
+.next{
+    right: 10px;
+}
+
+/* Hover effect */
+.nav-btn:hover{
+    background: rgba(0,0,0,0.8);
+}
+.gallery:hover .nav-btn{
+    opacity: 1;
 }
