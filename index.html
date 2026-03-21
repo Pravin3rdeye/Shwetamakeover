@@ -1,72 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Shweta Makeover Studio</title>
-<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
-<nav>
-    <div class="logo-container">
-        <img src="images/logo.png" alt="Beauty Studio Logo" class="logo">
-        <span><h1>Shweta Makeover Studio</h1></span>
-    </div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="appointment.html">Book</a>
-        <a href="contact.html">Contact</a>
-	<a href="about.html">About</a>
-    </div>
-</nav>
-<section class="hero">
-<div>
-<h2>Luxury Beauty At Your Home</h2>
-<p>Professional Makeup & Beauty Services in Varanasi</p>
-<!--<a href="appointment.html"><button class="btn">Book Now</button></a>-->
-<a href="https://wa.me/919452303929?text=Hi%20I%20want%20to%20book%20an%20appointment" target="_blank">
-    <button class="btn">Book on WhatsApp</button>
-</a>
-<!--<a href="https://calendly.com/yourlink" target="_blank">
-<button class="btn">Schedule Appointment</button>
-<a href="https://wa.me/918511674484?text=Hi%20I%20want%20to%20book%20an%20appointment.%0AName:%0ADate:%0AService:"
-target="_blank">
-<button class="btn">Book Appointment</button>
-</a>
-
-</a>-->
-</div>
-</section>
-
-<section Class="content">
-<div>
-<h2>Makeup Artists in Varanasi</h2>
-<h2>----------------------------------</h2>
-
-
-</div>
-</section>
-
-<section>
-<h2>Why Choose Us</h2>
-<div class="grid">
-<div class="card">⭐ 4.9 Rating</div>
-<div class="card">🏠 Home Service</div>
-<div class="card">💄 Premium Products</div>
-</div>
-</section>
-
-<footer>© 2026 Beauty Studio</footer>
-
-<a href="https://wa.me/919452303929?text=Hi%20I%20want%20to%20book%20a%20beauty%20service"
-   class="whatsapp-float" target="_blank">
-   💬
-</a>
+<link rel="stylesheet" href="style.css">
+<title>Shweta Makeover Studio</title>
 
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    background:#111;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    width:50px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:15px;
+}
+
+.nav-links a:hover{
+    color:#ff4d6d;
+}
+
+/* SLIDER */
+.gallery{
+    width:100%;
+    overflow:hidden;
+}
+
+.cards{
+    display:flex;
+    transition:0.5s;
+}
+
+.cards li{
+    list-style:none;
+    min-width:100%;
+}
+
+.cards img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+/* BUTTONS */
+.buttons{
+    text-align:center;
+    margin:10px;
+}
+
+button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    background:#9e1d1d;
+    color:rgb(255, 255, 255);
+    cursor:pointer;
+}
+
+button:hover{
+    background:#9e1d1d;
+}
+
+
+/* GRID */
+.grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    padding:20px;
+    background:#9e1d1d;
+    border-radius:10px;
+}
+
+/* WHATSAPP FLOAT */
 .whatsapp-float{
     position:fixed;
     width:60px;
@@ -82,14 +120,125 @@ target="_blank">
     font-size:28px;
     text-decoration:none;
     box-shadow:0 0 15px rgba(0,0,0,0.5);
-    z-index:1000;
-    transition:0.3s;
-}
-
-.whatsapp-float:hover{
-    transform:scale(1.1);
 }
 </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Beauty Studio Logo" class="logo">
+        <span><h1>Shweta Makeover Studio</h1></span>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="appointment.html">Book</a>
+        <a href="contact.html">Contact</a>
+	    <a href="about.html">About</a>
+    </div>
+</nav>
+
+<!-- SLIDER -->
+<div class="gallery">
+    <ul class="cards" id="slider">
+
+        <!-- CLONE LAST -->
+        <li><img src="https://picsum.photos/id/1018/1200/400"></li>
+
+        <!-- REAL -->
+        <li><img src="https://picsum.photos/id/1015/1200/400"></li>
+        <li><img src="https://picsum.photos/id/1016/1200/400"></li>
+        <li><img src="https://picsum.photos/id/1019/1200/400"></li>
+
+        <!-- CLONE FIRST -->
+        <li><img src="https://picsum.photos/id/1015/1200/400"></li>
+
+    </ul>
+    <!-- LEFT BUTTON -->
+    <button class="nav-btn prev" onclick="prev()">❮</button>
+
+    <!-- RIGHT BUTTON -->
+    <button class="nav-btn next" onclick="next()">❯</button>
+
+   
+</div>
+<!--<div class="buttons">
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+</div>-->
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h2>Luxury Beauty At Your Home</h2>
+        <p>Professional Makeup & Beauty Services in Varanasi</p>
+
+        <a href="https://wa.me/919452303929?text=Hi%20I%20want%20to%20book%20an%20appointment" target="_blank">
+            <button class="btn">Book on WhatsApp</button>
+        </a>
+
+        <a href="#">
+            <button class="btn">Schedule Appointment</button>
+        </a>
+    </div>
+</section>
+
+<!-- WHY -->
+<section>
+<h2 style="text-align:center;">Why Choose Us</h2>
+<div class="grid">
+    <div class="card">⭐ 4.9 Rating</div>
+    <div class="card">🏠 Home Service</div>
+    <div class="card">💄 Premium Products</div>
+</div>
+</section>
+
+<footer style="text-align:center;padding:20px;">
+© 2026 Beauty Studio
+</footer>
+
+<a href="https://wa.me/919452303929" class="whatsapp-float">💬</a>
+
+<!-- JS -->
+<script>
+const slider = document.getElementById("slider");
+const slides = slider.children;
+
+let index = 1;
+
+slider.style.transform = `translateX(-100%)`;
+
+function next(){
+    index++;
+    slider.style.transition="0.5s";
+    slider.style.transform=`translateX(-${index * 100}%)`;
+}
+
+function prev(){
+    index--;
+    slider.style.transition="0.5s";
+    slider.style.transform=`translateX(-${index * 100}%)`;
+}
+
+slider.addEventListener("transitionend",()=>{
+    if(index===slides.length-1){
+        slider.style.transition="none";
+        index=1;
+        slider.style.transform=`translateX(-100%)`;
+    }
+    if(index===0){
+        slider.style.transition="none";
+        index=slides.length-2;
+        slider.style.transform=`translateX(-${index * 100}%)`;
+    }
+});
+
+setInterval(next,3000);
+</script>
 
 </body>
 </html>
