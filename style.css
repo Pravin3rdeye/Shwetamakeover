@@ -251,3 +251,52 @@ body{
 .gallery:hover .nav-btn{
     opacity: 1;
 }
+/* SECTION STYLE */
+.section{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 20px;
+    gap:40px;
+}
+
+/* IMAGE */
+.section img{
+    width:400px;
+    border-radius:15px;
+}
+
+/* TEXT */
+.text{
+    max-width:500px;
+}
+
+.text h2{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.text p{
+    line-height:1.6;
+}
+
+/* REVERSE SECTION */
+.reverse{
+    flex-direction:row-reverse;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+    .section{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .reverse{
+        flex-direction:column;
+    }
+
+    .section img{
+        width:100%;
+    }
+}
