@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 <title>Shweta Makeover Studio</title>
 
 
@@ -132,7 +133,7 @@ button:hover{
         <img src="images/logo.png" alt="Beauty Studio Logo" class="logo">
         <span><h1>Shweta Makeover Studio</h1></span>
     </div>
-    <div class="nav-links">
+    <div class="nav-links" id="menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
@@ -140,7 +141,12 @@ button:hover{
         <a href="contact.html">Contact</a>
 	    <a href="about.html">About</a>
     </div>
+    <div class="toggle" id="toggle">
+        ☰
+    </div>
+    
 </nav>
+
 
 <!-- SLIDER -->
 <div class="gallery">
@@ -306,6 +312,7 @@ slider.addEventListener("transitionend",()=>{
 
 setInterval(next,3000);
 </script>
+
 
 </body>
 </html>
