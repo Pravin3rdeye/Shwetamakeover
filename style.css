@@ -383,3 +383,15 @@ body{
     
     
 }
+.hero2 {
+    height: 200vh;
+    display: display-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('images/shwetaoldlogo.jpg'); /* your local image */
+    background-size: cover;
+    background-position: center 90px;
+    background-repeat: no-repeat;
+}
