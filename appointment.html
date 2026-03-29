@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Book Appointment</title>
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<nav>
-    <div class="logo-container">
-        <img src="images/logo.png" alt="Beauty Studio Logo" class="logo">
-        <span><h1>Shweta Makeover Studio</h1></span>
-    </div>
-    <div class="nav-links" id="menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="appointment.html">Book</a>
-        <a href="contact.html">Contact</a>
-	    <a href="about.html">About</a>
-    </div>
-    <div class="toggle" id="toggle">
-        ☰
-    </div>
-    
-</nav>
+    <nav>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Beauty Studio Logo" class="logo">
+            <span>
+                <h1>Shweta Makeover Studio</h1>
+            </span>
+        </div>
+        <div class="nav-links" id="menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="appointment.html">Book</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="toggle" id="toggle">
+            ☰
+        </div>
 
-<section>
-<h2>Book Appointment</h2>
+    </nav>
 
-<form action="https://formspree.io/f/yourID" method="POST">
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<input type="date" required>
-<textarea placeholder="Service Required"></textarea>
-<button class="btn">Submit</button>
-</form>
+    <section>
+        <header class="main-header overlay">
+            <h2>Book Appointment</h2>
+        </header>
 
-</section>
+        <form action="https://formspree.io/f/yourID" method="POST">
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="date" required>
+            <textarea placeholder="Service Required"></textarea>
+            <button class="btn">Submit</button>
+        </form>
 
-<footer>© 2026</footer>
-<script src="script.js"></script>
+    </section>
+
+    <footer>© 2026</footer>
 </body>
+
 </html>
