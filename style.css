@@ -9,6 +9,22 @@ body{
     background:#0d0d0d;
     color:#fff;
 }
+/* Header */
+
+.main-header {
+    text-align: center;
+    margin: 5px 0 20px;
+}
+
+.main-header h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.main-header p {
+    color: #666;
+    font-size: 15px;
+}
 
 /* NAVBAR */
 nav{
@@ -115,6 +131,9 @@ h2{
     grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
     gap:15px;
     padding:20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .gallery img{
@@ -222,8 +241,9 @@ body{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
+    background: rgba(255, 182, 193, 0.7);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: black;
     border: none;
     font-size: 24px;
     padding: 10px 15px;
@@ -246,7 +266,8 @@ body{
 
 /* Hover effect */
 .nav-btn:hover{
-    background: rgba(0,0,0,0.8);
+    background: #ff69b4;
+    color: white;
 }
 .gallery:hover .nav-btn{
     opacity: 1;
